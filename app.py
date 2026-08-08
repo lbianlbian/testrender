@@ -24,7 +24,8 @@ def request_router():
           }
         }
         '''
-        data = request.get_json()  # returns a dict (or None if parsing fails)
+        incoming_payload = request.get_json()
+        data = incoming_payload["entry"][0]
         page_id = data["recipient"]["id"]
         payload = {
             "recipient": { "id": data["sender"]["id"] },
