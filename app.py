@@ -25,7 +25,7 @@ def request_router():
         }
         '''
         incoming_payload = request.get_json()
-        data = incoming_payload["entry"][0]
+        data = incoming_payload["entry"][0]["messaging"][0]
         page_id = data["recipient"]["id"]
         payload = {
             "recipient": { "id": data["sender"]["id"] },
