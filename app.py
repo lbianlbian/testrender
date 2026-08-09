@@ -42,7 +42,7 @@ def request_router():
         return "Handled POST"
     else:
         # pass the verification
-        return request.args.get("hub.challenge")
+        return request.args.get("hub.challenge", "default get request value returned")
 
 PROMPT = '''You are a rug pricing assistant for The Rug Finder. A designer will describe 
 spec changes to a base rug. Your job:
