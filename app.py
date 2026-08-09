@@ -78,4 +78,4 @@ def call_llm(query):
     }
     resp_raw = requests.post(MISTRAL_URL, headers=MISTRAL_HEADERS, json=payload)
     resp = resp_raw.json()
-    return resp["choices"][0]["message"]["content"][0]["text"]
+    return json.dumps(resp)  # resp["choices"][0]["message"]["content"][0]["text"]
