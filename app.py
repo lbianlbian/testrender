@@ -7,7 +7,7 @@ PAGE_ACCESS_TOKEN = os.getenv("PAGE_ACCESS_TOKEN")
 
 MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
 MISTRAL_HEADERS = {
-    "Authorization": f"Bearer {os.get_env('MISTRAL_API_KEY')}"
+    "Authorization": f"Bearer {os.getenv('MISTRAL_API_KEY')}"
 }
     
 app = Flask(__name__)
