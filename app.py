@@ -1,6 +1,7 @@
 from flask import Flask, request
 import requests
 import os
+import json
 
 FB_URL = "https://graph.facebook.com/v20.0"  # /PAGE-ID/messages?access_token=YOUR_PAGE_ACCESS_TOKEN
 PAGE_ACCESS_TOKEN = os.getenv("PAGE_ACCESS_TOKEN")
