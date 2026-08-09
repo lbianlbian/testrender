@@ -57,7 +57,7 @@ spec changes to a base rug. Your job:
 
 Base rug: 9'x12', wool, 100 KPSI, undyed = $900
 Pricing rules:
-- Size: +$18 per sq ft above 40 sq ft (5x8 base)
+- Size: +$18 per sq ft above 100 sq ft (9x12 base)
 - Knot density: +$60 per +25 KPSI above 100
 - Color: red +$50, blue +$120, green +$180, undyed +$0
 
@@ -79,4 +79,4 @@ def call_llm(query):
     }
     resp_raw = requests.post(MISTRAL_URL, headers=MISTRAL_HEADERS, json=payload)
     resp = resp_raw.json()
-    return json.dumps(resp)  # resp["choices"][0]["message"]["content"][0]["text"]
+    return resp["choices"][0]["message"]["content"]
